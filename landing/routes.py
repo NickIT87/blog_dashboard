@@ -7,7 +7,7 @@ from landing.models import Message, User
 
 
 @app.route('/', methods=['GET'])
-def hello_world():
+def home():
     try:
         uname = current_user.login
     except:
@@ -61,6 +61,7 @@ def login_page():
 
 
 @app.route('/register', methods=['GET', 'POST'])
+@login_required #for only exist superuser into DB
 def register():
     login = request.form.get('login')
     password = request.form.get('password')
@@ -86,7 +87,7 @@ def register():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('hello_world'))
+    return redirect(url_for('home'))
 
 
 @app.after_request

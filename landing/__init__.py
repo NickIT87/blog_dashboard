@@ -10,6 +10,7 @@ app = Flask(__name__)
 app.secret_key = 'somesecret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
 db = SQLAlchemy(app)
 manager = LoginManager(app)
 
@@ -17,7 +18,9 @@ manager = LoginManager(app)
 from landing import models, routes
 
 
-admin = Admin(app)
-admin.add_view(ModelView(models.User, db.session))
+admin = Admin(app, index_view=models.MyAdminIndexView())
+admin.add_view(models.MyModelView(models.User, db.session))
+admin.add_view(models.MyModelView(models.Message, db.session))
+admin.add_view(models.MyModelView(models.Tag, db.session))
 
-db.create_all()
+#db.create_all()

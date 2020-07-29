@@ -1,4 +1,7 @@
-from flask_login import UserMixin
+from flask import redirect, url_for
+from flask_login import UserMixin, current_user
+from flask_admin.contrib.sqla import ModelView
+from flask_admin import AdminIndexView
 
 from landing import app, db, manager
 
@@ -31,3 +34,19 @@ class User (db.Model, UserMixin):
 @manager.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
+
+
+class MyModelView(ModelView):
+    def is_accessible(self):
+        return current_user.is_authenticated
+
+    def inaccessible_callback(self, name, **kwargs):
+        return redirect(url_for('home'))
+
+
+class MyAdminIndexView(AdminIndexView):
+    def is_accessible(self):
+        return current_user.is_authenticated
+
+    def inaccessible_callback(self, name, **kwargs):
+        return redirect(url_for('home'))
