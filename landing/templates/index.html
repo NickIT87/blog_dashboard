@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greetings</title>
+</head>
+<body>
+
+{% if curusr%}
+<h1>Hello, user: {{ curusr }}</h1>
+{% else %}
+<h1>Hello, Anonymus</h1>
+{% endif %}
+
+<a href="{{ url_for('main') }}">Main page</a>
+
+</body>
+</html>
