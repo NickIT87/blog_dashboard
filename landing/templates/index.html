@@ -31,8 +31,8 @@
 </header>
 
 <div class="carousel carousel-slider">
-    <a class="carousel-item" href="#five!"><img src="{{ url_for('static', filename='images/red.png')}}"></a>
     <a class="carousel-item" href="#five!"><img src="{{ url_for('static', filename='images/mountains.jpg')}}"></a>
+    <a class="carousel-item" href="#five!"><img src="{{ url_for('static', filename='images/red.png')}}"></a>
 </div>
 
 <div class="container">
@@ -46,16 +46,11 @@
     {% endif %}
 
     <a href="{{ url_for('main') }}">Main page</a>
+
+
 </div>
 
 
-<script>
-M.AutoInit();
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, options);
-});
-</script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
