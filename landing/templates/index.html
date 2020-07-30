@@ -3,16 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Greetings</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </head>
 <body>
 
-{% if curusr%}
-<h1>Hello, user: {{ curusr }}</h1>
-{% else %}
-<h1>Hello, Anonymus</h1>
-{% endif %}
+<header>
+    <nav>
+        <div class="nav-wrapper">
+        {% if curusr%}
+            <a href="#!" class="brand-logo right">{{ curusr }}</a>
+        {% endif %}
+            <ul class="left hide-off-med-and-down">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="{{ url_for('main') }}">Blog</a></li>
+                <li><a href="/admin">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
-<a href="{{ url_for('main') }}">Main page</a>
+<div class="container">
+    {% if curusr%}
+    <h1>Hello, user: {{ curusr }}</h1>
+    {% else %}
+    <h1>Hello, Anonymus</h1>
+    {% endif %}
+
+    <a href="{{ url_for('main') }}">Main page</a>
+</div>
+
 
 </body>
 </html>
