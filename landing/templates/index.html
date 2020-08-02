@@ -44,13 +44,19 @@
     </ul>
 </header>
 
-
+<!--
 <div class="carousel carousel-slider">
-    <a class="carousel-item" href="#five!"><img src="{{ url_for('static', filename='images/mountains.jpg')}}"></a>
-    <a class="carousel-item" href="#five!"><img src="{{ url_for('static', filename='images/red.png')}}"></a>
+    <a class="carousel-item" href="#one!"><img src="{{ url_for('static', filename='images/background.jpg')}}"></a>
+    <a class="carousel-item" href="#two!"><img src="{{ url_for('static', filename='images/mountains.jpg')}}"></a>
+    <a class="carousel-item" href="#three!"><img src="{{ url_for('static', filename='images/red.png')}}"></a>
+</div>
+-->
+
+<div class="parallax-container">
+      <div class="parallax"><img src="{{ url_for('static', filename='images/background.jpg') }}"></div>
 </div>
 
-
+<div class="section white">
 <!-- Page Layout here -->
 <div class="row">
 
@@ -128,24 +134,33 @@
             12-columns-wide on small screens  -->
         </div>
 </div>
+    <!-- paralax section white -->
+</div>
+
+<div class="parallax-container">
+      <div class="parallax"><img src="{{ url_for('static', filename='images/mountains.jpg') }}"></div>
+</div>
 
 
-
-
-
-<div class="container">
+<div class="section white">
+    <div class="container">
 <!--<a class="carousel-item" href="#one!"><img src="{{ url_for('static', filename='images/red.png')}}"></a>-->
 
+        {% if curusr%}
+        <h1>Hello, user: {{ curusr }}</h1>
+        {% else %}
+        <h1>Hello, Anonymus</h1>
+        {% endif %}
 
-    {% if curusr%}
-    <h1>Hello, user: {{ curusr }}</h1>
-    {% else %}
-    <h1>Hello, Anonymus</h1>
-    {% endif %}
+        <a href="{{ url_for('main') }}">Main page</a>
 
-    <a href="{{ url_for('main') }}">Main page</a>
+        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores assumenda blanditiis cupiditate enim facere fugiat hic itaque iusto minus nobis numquam, quisquam recusandae sed similique suscipit, veritatis vitae voluptates?</P>
 
+    </div>
+</div>
 
+<div class="parallax-container">
+      <div class="parallax"><img src="{{ url_for('static', filename='images/red.png') }}"></div>
 </div>
 
 

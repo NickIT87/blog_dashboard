@@ -19,3 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     //console.log("Event listener worked");
     //error "options is not defined",delete options var argument from instances
 });
+
+// paralax
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems);
+});
