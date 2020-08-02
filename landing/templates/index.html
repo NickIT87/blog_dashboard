@@ -17,15 +17,16 @@
         <div class="nav-wrapper">
             <div class="container">
                 {% if curusr %}
-                    <a href="#!" class="brand-logo">{{ curusr }}</a>
+                    <a href="#!" class="brand-logo">root: {{ curusr }}</a>
                 {% else %}
-                    <a href="#!" class="brand-logo">Tutorials</a>
+                    <a href="#!" class="brand-logo"><img style="margin-top: 5%;"src="{{ url_for('static', filename='images/logoQA.png')}}"></a>
                 {% endif %}
             </div>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('main') }}">Blog</a></li>
+                <li><a style="color: #e3f2fd;" href="#">Blog</a></li>
                 {% if curusr %}
+                <li><a href="{{ url_for('main') }}">AddPost</a></li>
                 <li><a href="/admin">Admin</a></li>
                 <li><a href="/register">register</a></li>
                 <li><a href="/logout">logout</a></li>
@@ -61,13 +62,13 @@
             4-columns-wide on medium screens,
             12-columns-wide on small screens  -->
             <div class="container">
-                <h2>Test header navbar</h2>
+                <h4 style="margin-left: 10px;">Software Testing : </h4>
+                <hr>
+                <img style="width: 95%; height: 95%;" src="{{ url_for('static', filename='images/mylogo.png')}}">
+                <hr>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, modi natus. Minus officiis dolor nulla quidem iste dolore quia fugit voluptates veritatis labore repudiandae, cumque vitae quisquam nihil rem sequi.</p>
-
                 <img src="{{ url_for('static', filename='images/GaAs.gif')}}">
-
             </div>
-
         </div>
 
         <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
