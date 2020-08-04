@@ -25,7 +25,7 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <!--<li><a style="color: #e3f2fd;" href="#">Blog</a></li>-->
-                <li><a class="waves-effect waves-light btn" href="#">Blog</a></li>
+                <li><a class="waves-effect waves-light btn disabled" href="#">Blog</a></li>
                 {% if curusr %}
                 <li><a href="{{ url_for('main') }}">AddPost</a></li>
                 <li><a href="/admin">Admin</a></li>
@@ -53,8 +53,8 @@
 </div>
 -->
 
-<div class="section white" style="height: 1000px;">
-    <h1>TEST</h1>
+<div class="section white" style="padding-top: 0rem; padding-bottom: 0rem; line-height: 0rem; background-image: ">
+    <img class="responsive-img" src="{{ url_for('static', filename='images/background.jpg')}}">
 </div>
 
 <div class="parallax-container">
