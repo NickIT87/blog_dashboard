@@ -59,7 +59,44 @@
 
 <div class="section white">
 <!-- Page Layout here -->
-<div class="row">
+    <div class="row">
+        <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
+          <!-- Grey navigation panel
+
+                This content will be:
+            3-columns-wide on large screens,
+            4-columns-wide on medium screens,
+            12-columns-wide on small screens  -->
+            <div class="container">
+                <h4 style="color: #ff5252;">Quality Assurance : </h4>
+                <hr>
+                <img style="width: 95%; height: 95%;" src="{{ url_for('static', filename='images/mylogo.png')}}">
+                <hr>
+                <h5><a href="#">Nickolazz1</a></h5>
+
+            </div>
+        </div>
+
+        <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+            <div class="container">
+                <h4 style="color: #ff5252;">Soft skills, services</h4>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <!-- paralax section white -->
+</div>
+
+<div class="parallax-container">
+      <div class="parallax"><img src="{{ url_for('static', filename='images/physics.jpg') }}"></div>
+</div>
+
+<div class="section white">
+
+    <div class="row">
 
         <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
           <!-- Grey navigation panel
@@ -69,12 +106,12 @@
             4-columns-wide on medium screens,
             12-columns-wide on small screens  -->
             <div class="container">
-                <h4 style="margin-left: 10px;">Software Testing : </h4>
+                <h4>Quality Assurance : </h4>
                 <hr>
                 <img style="width: 95%; height: 95%;" src="{{ url_for('static', filename='images/mylogo.png')}}">
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, modi natus. Minus officiis dolor nulla quidem iste dolore quia fugit voluptates veritatis labore repudiandae, cumque vitae quisquam nihil rem sequi.</p>
-                <img src="{{ url_for('static', filename='images/GaAs.gif')}}">
+                <p>Nickolazz1</p>
+
             </div>
         </div>
 
@@ -87,12 +124,19 @@
             12-columns-wide on small screens  -->
 
             <div class="container">
-                <h1>Hello materialize</h1>
-                <p>     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book.
-                </p>
+                <h4>Software Testing for your bysiness solution</h4>
+                <p> Differend kinds of testing ready for you </p>
+                <ul>
+                    <li>
+                        <p>Behavior driven development</p>
+                    </li>
+                    <li>
+                        <p>OWASP top 10 detection</p>
+                    </li>
+                    <li>
+                        <p>Acceptance test driven development</p>
+                    </li>
+                </ul>
 
                 <div class="slider">
                     <ul class="slides">
@@ -116,92 +160,6 @@
                         <div class="caption center-align">
                           <h3 style="color: #ff1744;">Documentation</h3>
                           <h4 style="color: #00b8d4">UML design</h4>
-                        </div>
-                      </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Teal page content
-
-                This content will be:
-            9-columns-wide on large screens,
-            8-columns-wide on medium screens,
-            12-columns-wide on small screens  -->
-        </div>
-</div>
-    <!-- paralax section white -->
-</div>
-
-<div class="parallax-container">
-      <div class="parallax"><img src="{{ url_for('static', filename='images/physics.jpg') }}"></div>
-</div>
-
-
-<div class="section white">
-    <div class="row">
-
-        <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
-          <!-- Grey navigation panel
-
-                This content will be:
-            3-columns-wide on large screens,
-            4-columns-wide on medium screens,
-            12-columns-wide on small screens  -->
-            <div class="container">
-                <h4 style="margin-left: 10px;">Software Testing : </h4>
-                <hr>
-                <img style="width: 95%; height: 95%;" src="{{ url_for('static', filename='images/mylogo.png')}}">
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, modi natus. Minus officiis dolor nulla quidem iste dolore quia fugit voluptates veritatis labore repudiandae, cumque vitae quisquam nihil rem sequi.</p>
-                <img src="{{ url_for('static', filename='images/GaAs.gif')}}">
-            </div>
-        </div>
-
-        <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
-          <!-- Teal page content
-
-                This content will be:
-            9-columns-wide on large screens,
-            8-columns-wide on medium screens,
-            12-columns-wide on small screens  -->
-
-            <div class="container">
-                <h1>Hello materialize</h1>
-                <p>     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book.
-                </p>
-
-                <div class="slider">
-                    <ul class="slides">
-                      <li>
-                        <img src="{{ url_for('static', filename='images/programming.PNG') }}"> <!-- random image -->
-                        <div class="caption left-align">
-                          <h3 style="color: #ff5252;">Test automation</h3>
-                          <h4 style="color: #84ffff;">Unittest, ATDD, BDD, programming.</h4>
-                          <!--<h5 class="light cyan-text text-lighten-3">ATDD, BDD, unittest, programming, docker</h5>-->
-                        </div>
-                      </li>
-                      <li>
-                        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
-                        <div class="caption left-align">
-                          <h3>Left Aligned Caption</h3>
-                          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                        </div>
-                      </li>
-                      <li>
-                        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
-                        <div class="caption right-align">
-                          <h3>Right Aligned Caption</h3>
-                          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                        </div>
-                      </li>
-                      <li>
-                        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
-                        <div class="caption center-align">
-                          <h3>This is our big Tagline!</h3>
-                          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
                         </div>
                       </li>
                     </ul>
