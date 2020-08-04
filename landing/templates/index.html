@@ -53,6 +53,10 @@
 </div>
 -->
 
+<div class="section white" style="height: 1000px;">
+    <h1>TEST</h1>
+</div>
+
 <div class="parallax-container">
       <div class="parallax"><img src="{{ url_for('static', filename='images/math.jpeg') }}"></div>
 </div>
@@ -68,9 +72,10 @@
             4-columns-wide on medium screens,
             12-columns-wide on small screens  -->
             <div class="container">
-                <h4 style="color: #ff5252;">Quality Assurance : </h4>
+                <h4>Quality Assurance : </h4>
                 <hr>
-                <img style="width: 95%; height: 95%;" src="{{ url_for('static', filename='images/mylogo.png')}}">
+                <!--<img style="width: 95%; height: 95%;" src="{{ url_for('static', filename='images/mylogo.png')}}">-->
+                <img class="responsive-img" src="{{ url_for('static', filename='images/mylogo.png')}}">
                 <hr>
                 <h5><a href="#">Nickolazz1</a></h5>
 
@@ -79,12 +84,10 @@
 
         <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
             <div class="container">
-                <h4 style="color: #ff5252;">Soft skills, services</h4>
+                <h4><img class="responsive-img" src="{{ url_for('static', filename='images/title1.png')}}"></h4>
+
 
             </div>
-
-
-
         </div>
     </div>
     <!-- paralax section white -->
@@ -106,9 +109,9 @@
             4-columns-wide on medium screens,
             12-columns-wide on small screens  -->
             <div class="container">
-                <h4>Quality Assurance : </h4>
+                <h4>Quality Assurance:</h4>
                 <hr>
-                <img style="width: 95%; height: 95%;" src="{{ url_for('static', filename='images/mylogo.png')}}">
+                <img class="responsive-img" src="{{ url_for('static', filename='images/mylogo.png')}}">
                 <hr>
                 <p>Nickolazz1</p>
 
@@ -124,6 +127,7 @@
             12-columns-wide on small screens  -->
 
             <div class="container">
+                <img class="responsive-img" src="{{ url_for('static', filename='images/title1.png')}}">
                 <h4>Software Testing for your bysiness solution</h4>
                 <p> Differend kinds of testing ready for you </p>
                 <ul>
