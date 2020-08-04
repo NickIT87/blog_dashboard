@@ -23,16 +23,18 @@
                 {% endif %}
             </div>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
+            <div class="container">
+                <ul class="right hide-on-med-and-down">
                 <!--<li><a style="color: #e3f2fd;" href="#">Blog</a></li>-->
-                <li><a class="waves-effect waves-light btn" href="#">Blog</a></li>
-                {% if curusr %}
-                <li><a href="{{ url_for('main') }}">AddPost</a></li>
-                <li><a href="/admin">Admin</a></li>
-                <li><a href="/register">register</a></li>
-                <li><a href="/logout">logout</a></li>
-                {% endif %}
-            </ul>
+                    <li><a class="waves-effect waves-light btn" href="#">Blog</a></li>
+                    {% if curusr %}
+                    <li><a href="{{ url_for('main') }}">AddPost</a></li>
+                    <li><a href="/admin">Admin</a></li>
+                    <li><a href="/register">register</a></li>
+                    <li><a href="/logout">logout</a></li>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
     </nav>
     <ul class="sidenav" id="mobile-demo">
@@ -51,11 +53,42 @@
     <a class="carousel-item" href="#two!"><img src="{{ url_for('static', filename='images/mountains.jpg')}}"></a>
     <a class="carousel-item" href="#three!"><img src="{{ url_for('static', filename='images/red.png')}}"></a>
 </div>
+
+<div class="carousel carousel-slider">
+        <a class="carousel-item" href="#one!"><img src="{{ url_for('static', filename='images/background.png')}}"></a>
+</div>
+<div class="container">
+    <img class="responsive-img" src="{{ url_for('static', filename='images/background.png')}}">
+</div>
 -->
 
-<div class="section white" style="padding-top: 0rem; padding-bottom: 0rem; line-height: 0rem; background-image: ">
-    <img class="responsive-img" src="{{ url_for('static', filename='images/title.png')}}">
+<div class="section red lighten-2" style="padding-top: 0rem; padding-bottom: 0.1rem; line-height: 0.1rem;">
+    <div class="carousel carousel-slider center">
+        <div class="carousel-fixed-item center">
+            <div class="container" style="padding-bottom: 3rem;">
+                <img class="responsive-img" src="{{ url_for('static', filename='images/logotitle.png')}}">
+            </div>
+            <a class="waves-effect waves-light btn">button</a>
+        </div>
+        <div class="carousel-item red lighten-2 white-text" href="#one!">
+            <img class="responsive-img" src="{{ url_for('static', filename='images/space2.jpg')}}">
+        </div>
+        <div class="carousel-item amber white-text" href="#two!">
+          <h2>Second Panel</h2>
+          <p class="white-text">This is your second panel</p>
+        </div>
+        <div class="carousel-item green white-text" href="#three!">
+          <h2>Third Panel</h2>
+          <p class="white-text">This is your third panel</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#four!">
+          <h2>Fourth Panel</h2>
+          <p class="white-text">This is your fourth panel</p>
+        </div>
+    </div>
+
 </div>
+
 
 <div class="parallax-container">
       <div class="parallax"><img src="{{ url_for('static', filename='images/math.jpeg') }}"></div>

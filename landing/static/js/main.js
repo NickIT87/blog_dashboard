@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // carousel
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems);
+    var instances = M.Carousel.init(elems, {
+        fullWidth: true,
+        indicators: true,
+    });
     //console.log("Event listener worked");
     //error "options is not defined",delete options var argument from instances
 });
