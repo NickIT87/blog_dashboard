@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head links framework -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greetings</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- materialize icons -->
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://kit.fontawesome.com/4ddb9605aa.js" crossorigin="anonymous"></script> <!-- Fontawesomelink icons -->
 </head>
+<!-- Document body page -->
 <body>
-
+<!-- Header navbar -->
 <header>
     <nav class="sidenav-trigger">
         <div class="nav-wrapper">
@@ -46,22 +49,7 @@
         {% endif %}
     </ul>
 </header>
-
-<!--
-<div class="carousel carousel-slider">
-    <a class="carousel-item" href="#one!"><img src="{{ url_for('static', filename='images/background.jpg')}}"></a>
-    <a class="carousel-item" href="#two!"><img src="{{ url_for('static', filename='images/mountains.jpg')}}"></a>
-    <a class="carousel-item" href="#three!"><img src="{{ url_for('static', filename='images/red.png')}}"></a>
-</div>
-
-<div class="carousel carousel-slider">
-        <a class="carousel-item" href="#one!"><img src="{{ url_for('static', filename='images/background.png')}}"></a>
-</div>
-<div class="container">
-    <img class="responsive-img" src="{{ url_for('static', filename='images/background.png')}}">
-</div>
--->
-
+<!-- Header panel-carousel, cover for my design -->
 <div class="section red lighten-2" style="padding-top: 0rem; padding-bottom: 0.2rem; line-height: 0rem;">
     <div class="carousel carousel-slider center">
         <div class="carousel-fixed-item center">
@@ -91,10 +79,11 @@
 </div>
 
 
+<!-- paralax 1 -->
 <div class="parallax-container">
       <div class="parallax"><img src="{{ url_for('static', filename='images/math.jpeg') }}"></div>
 </div>
-
+<!-- Prerequisit section 1 -->
 <div class="section white">
 <!-- Page Layout here -->
     <div class="row">
@@ -111,26 +100,27 @@
                 <!--<img style="width: 95%; height: 95%;" src="{{ url_for('static', filename='images/mylogo.png')}}">-->
                 <img class="responsive-img" src="{{ url_for('static', filename='images/mylogo.png')}}">
                 <hr>
-                <h5><a href="#">Nickolazz1</a></h5>
-
+                <h5><a href="https://github.com/Nickolazz1"><i style="color: #64b5f6;" class="material-icons">person</i>Nick</a></h5>
+                <h5><i style="color: #64b5f6;" class="material-icons">phone_android</i>+380990896690</h5>
+                <h5><a href="mailto:elanir358@gmail.com"><i style="color: #64b5f6;" class="material-icons">mail_outline</i>Elanir358@gmail.com</a></h5>
             </div>
         </div>
 
         <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
             <div class="container">
-                <h4><img class="responsive-img" src="{{ url_for('static', filename='images/title1.png')}}"></h4>
-
+                <h4><img class="responsive-img" src="{{ url_for('static', filename='images/title2.png')}}"></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad, assumenda cupiditate doloremque exercitationem, id illum in magnam minima non officiis quidem sunt, voluptas! Facilis laborum quibusdam sequi vero voluptates.</p>
 
             </div>
         </div>
     </div>
     <!-- paralax section white -->
 </div>
-
+<!-- paralax 2 -->
 <div class="parallax-container">
       <div class="parallax"><img src="{{ url_for('static', filename='images/physics.jpg') }}"></div>
 </div>
-
+<!-- Main content section 2 -->
 <div class="section white">
 
     <div class="row">
@@ -226,8 +216,8 @@
 
     </div>
 </div>
-
- <footer class="page-footer">
+<!-- Footer with advertising promotion -->
+<footer class="page-footer">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
@@ -262,7 +252,8 @@
  </footer>
 
 
-<link rel="stylesheet" src="{{ url_for('static', filename='css/main.css') }}">
+<!-- Additional custom hardcode -->
+<link rel="stylesheet" src="{{ url_for('static', filename='css/main.css') }}"> <!-- Sticky footer -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
-</body>
+</body> <!-- End Body document -->
 </html>
