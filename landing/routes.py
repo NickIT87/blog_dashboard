@@ -23,7 +23,7 @@ def blog():
     except:
         uname = False
 
-    return render_template('blog.html', messages=Message.query.all(), curusr=uname)
+    return render_template('blog.html', messages=list(reversed(Message.query.all())), curusr=uname)
 
 
 @app.route('/main', methods=['GET'])
