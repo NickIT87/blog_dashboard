@@ -16,6 +16,16 @@ def home():
     return render_template('index.html', curusr=uname)
 
 
+@app.route('/blog', methods=['GET'])
+def blog():
+    try:
+        uname = current_user.login
+    except:
+        uname = False
+
+    return render_template('blog.html', messages=Message.query.all(), curusr=uname)
+
+
 @app.route('/main', methods=['GET'])
 @login_required
 def main():

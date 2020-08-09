@@ -29,7 +29,7 @@
             <div class="container">
                 <ul class="right hide-on-med-and-down">
                 <!--<li><a style="color: #e3f2fd;" href="#">Blog</a></li>-->
-                    <li><a class="waves-effect waves-light btn" href="#">Blog</a></li>
+                    <li><a class="waves-effect waves-light btn" href="{{ url_for('blog') }}">Blog</a></li>
                     {% if curusr %}
                     <li><a href="{{ url_for('main') }}">AddPost</a></li>
                     <li><a href="/admin">Admin</a></li>
@@ -41,7 +41,7 @@
         </div>
     </nav>
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="{{ url_for('main') }}">Blog</a></li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
         {% if curusr %}
         <li><a href="/admin">Admin</a></li>
         <li><a href="/register">register</a></li>
@@ -57,7 +57,7 @@
             <div class="container" style="padding-bottom: 3rem;">
                 <img class="responsive-img" src="{{ url_for('static', filename='images/logotitle.png')}}">
             </div> -->
-            <a class="waves-effect waves-light btn">Posts</a>
+            <a class="waves-effect waves-light btn" href="{{ url_for('blog') }}">Posts</a>
         </div>
         <div class="carousel-item red lighten-2 white-text" href="#one!">
             <img class="responsive-img" src="{{ url_for('static', filename='images/space2.png')}}">

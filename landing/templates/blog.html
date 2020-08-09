@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - posts</title>
+</head>
+<body>
+
+<h1>Blog posts coming soon</h1>
+
+<p>in progress {{ curusr }} </p>
+
+{% for message in messages %}
+<div>{{ message.text }}&nbsp;
+    {% for tag in message.tags %}
+        <b>#{{ tag.text }}</b>
+    {% endfor %}
+</div>
+{% endfor %}
+
+</body>
+</html>
