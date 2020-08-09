@@ -50,24 +50,12 @@
 
 
 <div class="container">
-    <!--
-    <h1>Blog posts coming soon</h1>
-
-    <p>in progress {{ curusr }} </p>
-
-    {% for message in messages %}
-    <div>{{ message.text }}&nbsp;
-        {% for tag in message.tags %}
-            <b>#{{ tag.text }}</b>
-        {% endfor %}
-    </div>
-    {% endfor %}
-    -->
+    <!-- H1 image title -->
     <div class="container">
         <h1><img class="responsive-img" src="{{ url_for('static', filename='images/BlogPosts.png')}}"></h1>
     </div>
 
-
+    <!-- All cards -->
     {% for message in messages %}
     <div class="row">
         <div class="col s12 m12 l12">
