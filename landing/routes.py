@@ -26,6 +26,16 @@ def blog():
     return render_template('blog.html', messages=list(reversed(Message.query.all())), curusr=uname)
 
 
+@app.route('/blog/<int:id>', methods=['GET'])
+def view_post(id):
+    post = Message.query.all()
+
+    if id >= len(post):
+        return redirect(url_for('home'))
+
+    return render_template('post.html', id=id, post=post[id].text)
+
+
 @app.route('/main', methods=['GET'])
 @login_required
 def main():
