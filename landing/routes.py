@@ -31,7 +31,7 @@ def view_post(id):
     post = Message.query.all()
 
     if id >= len(post):
-        return redirect(url_for('home'))
+        return redirect(url_for('blog'))
 
     return render_template('post.html', id=id, post=post[id].text)
 
