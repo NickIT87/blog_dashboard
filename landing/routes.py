@@ -36,6 +36,11 @@ def view_post(id):
     return render_template('post.html', id=id, post=post[id].text)
 
 
+@app.route('/feature', methods=['GET'])
+def feature():
+    return render_template('feature.html')
+
+
 @app.route('/main', methods=['GET'])
 @login_required
 def main():
