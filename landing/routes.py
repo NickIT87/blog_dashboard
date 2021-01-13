@@ -60,6 +60,11 @@ def add_message():
     return redirect(url_for('main'))
 
 
+@app.route('/landos', methods=['GET'])
+def landos_ng_app():
+    return render_template('landos/index.html')
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
     login = request.form.get('login')
