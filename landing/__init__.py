@@ -5,12 +5,20 @@ from flask_login import LoginManager
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
+import os
+#print(str(os.getcwd()))
+
+
+UPLOAD_FOLDER = "../uploads"
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+
 
 app = Flask(__name__)
 app.secret_key = 'somesecret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER                     # new
 db = SQLAlchemy(app)
 manager = LoginManager(app)
 
