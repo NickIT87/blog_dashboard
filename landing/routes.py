@@ -53,10 +53,8 @@ def main():
 def add_message():
     text = request.form['text']
     tag = request.form['tag']
-
     db.session.add(Message(text, tag))
     db.session.commit()
-
     return redirect(url_for('main'))
 
 
@@ -72,12 +70,9 @@ def login_page():
 
     if login and password:
         user = User.query.filter_by(login=login).first()
-
         if user and check_password_hash(user.password, password):
             login_user(user)
-
             next_page = request.args.get('next')
-
             if next_page:
                 return redirect(next_page)
             else:
