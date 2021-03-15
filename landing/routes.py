@@ -12,7 +12,6 @@ def home():
         uname = current_user.login
     except:
         uname = False
-
     return render_template('index.html', curusr=uname)
 
 
@@ -22,17 +21,14 @@ def blog():
         uname = current_user.login
     except:
         uname = False
-
     return render_template('blog.html', messages=list(reversed(Message.query.all())), curusr=uname)
 
 
 @app.route('/blog/<int:id>', methods=['GET'])
 def view_post(id):
     post = Message.query.all()
-
     if id >= len(post):
         return redirect(url_for('blog'))
-
     return render_template('post.html', id=id, post=post[id].text)
 
 
@@ -67,7 +63,6 @@ def landos_ng_app():
 def login_page():
     login = request.form.get('login')
     password = request.form.get('password')
-
     if login and password:
         user = User.query.filter_by(login=login).first()
         if user and check_password_hash(user.password, password):
@@ -81,7 +76,6 @@ def login_page():
             flash('Login or password is not correct')
     else:
         flash('Please fill login and password fields')
-
     return render_template('login.html')
 
 
@@ -91,7 +85,6 @@ def register():
     login = request.form.get('login')
     password = request.form.get('password')
     password2 = request.form.get('password2')
-
     if request.method == 'POST':
         if not (login or password or password2):
             flash('Please, fill all fields!')
@@ -104,7 +97,6 @@ def register():
             db.session.commit()
 
             return redirect(url_for('login_page'))
-
     return render_template('register.html')
 
 
@@ -124,5 +116,4 @@ def my_dash_app():
 def redirect_to_signin(response):
     if response.status_code == 401:
         return redirect(url_for('login_page') + '?next=' + request.url)
-
     return response
