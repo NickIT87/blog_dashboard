@@ -72,7 +72,3 @@ dashapp.layout = html.Div(children=[
         figure=fig
     )
 ])
-
-@app.route('/dash')
-def my_dash_app():
-    return dashapp.index()

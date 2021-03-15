@@ -2,7 +2,7 @@ from flask import render_template, redirect, url_for, request, flash
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from landing import app, db, manager
+from landing import *                       #from landing import app, db, manager
 from landing.models import Message, User
 
 
@@ -113,6 +113,11 @@ def register():
 def logout():
     logout_user()
     return redirect(url_for('home'))
+
+
+@app.route('/dash')
+def my_dash_app():
+    return dashapp.index()
 
 
 @app.after_request
