@@ -3,7 +3,7 @@ from flask_login import UserMixin, current_user
 from flask_admin.contrib.sqla import ModelView
 from flask_admin import AdminIndexView
 
-from landing import app, db, manager
+from landing import db, manager
 
 
 class Message(db.Model):
