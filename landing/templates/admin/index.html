@@ -1,13 +1,14 @@
 {% extends 'admin/master.html' %}
 
 {% block body %}
-  <h4>"Programming Coach" site map:</h4>
+  <h3>"Programming Coach" site map:</h3>
   <br>
-  <h3><a href="/">index(landing)</a></h3>
+  <ul>
+    <li><h3><a href="/">index(landing)</a></h3></li>
+    <li><h3><a href="/blog">blog</a></h3></li>
+    <li><h3><a href="/register">register new (ROOT)user</a></h3></li>
+    <li><h3><a href="/main">add new post</a></h3></li>
+  </ul>
   <br>
-  <h3><a href="/blog">blog</a></h3>
-  <br>
-  <h3><a href="/register">register new (ROOT)user</a></h3>
-  <br>
-  <h3><a href="/main">add new post</a></h3>
+  <a href="/logout" class="btn btn-danger btn-lg">logout</a>
 {% endblock %}
