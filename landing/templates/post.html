@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Post</title>
-</head>
-<body>
+{% extends "index.html" %}
+{% block post %}
+<div class="post_content">
 
+    <h1>{{ id }}</h1>
 
-<h1>{{ id }}</h1>
+    <p>{{ post }}</p>
 
-<p>{{ post }}</p>
+    <h1>I will display &#x16CF; &#x16DF;</h1>
 
-<h1>I will display &#x16CF; &#x16DF;</h1>
-</body>
-</html>
+</div>
+{% endblock %}

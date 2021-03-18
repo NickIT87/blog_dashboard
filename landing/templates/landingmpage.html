@@ -1,0 +1,282 @@
+{% extends "index.html" %}
+{% block landing %}
+<!-- Header panel-carousel, cover for my design -->
+<div class="section red lighten-2" style="padding-top: 0rem; padding-bottom: 0.2rem; line-height: 0rem;">
+    <div class="carousel carousel-slider center">
+        <div class="carousel-fixed-item center">
+            <!--
+            <div class="container" style="padding-bottom: 3rem;">
+                <img class="responsive-img" src="{{ url_for('static', filename='images/logotitle.png')}}">
+            </div> -->
+            <a class="waves-effect waves-light btn" href="{{ url_for('blog') }}">Posts</a>
+        </div>
+        <div class="carousel-item red lighten-2 white-text" href="#one!">
+            <img class="responsive-img" src="{{ url_for('static', filename='images/space2.png')}}">
+        </div>
+        <div class="carousel-item amber white-text" href="#two!">
+          <h2>If the nonsense that we have to hear in conversation begins to anger us, we must imagine that this is a comic scene between two fools; it is the most tested remedy.</h2>
+          <p class="white-text">Arthur Schopenhauer</p>
+        </div>
+        <div class="carousel-item green white-text" href="#three!">
+          <h2>Somehow, the concept of freedom was lost. It is also a question of what freedom loners have appropriated for themselves ... or what freedom we are trying so hard to preserve.</h2>
+          <p class="white-text">Paul Denton</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#fourth!">
+          <h2>A person is least like himself when he speaks on his own behalf. Give him a mask and he will tell the whole truth.</h2>
+          <p class="white-text">Oscar Wilde</p>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- paralax 1 -->
+<div class="parallax-container">
+      <div class="parallax"><img src="{{ url_for('static', filename='images/math.jpeg') }}"></div>
+</div>
+<!-- Prerequisit section 1 -->
+<div class="section white">
+<!-- Page Layout here -->
+    <div class="row">
+        <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
+          <!-- Grey navigation panel
+
+                This content will be:
+            3-columns-wide on large screens,
+            4-columns-wide on medium screens,
+            12-columns-wide on small screens  -->
+            <div class="container">
+                <h5>&nbsp;#White hat</h5>
+                <hr>
+                <br>
+                <div class="container">
+                    <img class="responsive-img" src="{{ url_for('static', filename='images/hack.png')}}">
+                </div>
+                <br>
+                <hr>
+                <h5>&nbsp;Desired tech stack</h5>
+                <div class="my_prefered_tech_stack">
+                    <blockquote>
+                        <p>Kali</p>
+                        <p>MSF, nmap, sqlmap, OWASP_ZAP, BurpSuite</p>
+                    </blockquote>
+                    <blockquote>
+                        <p>Python</p>
+                        <p>Flask, behave, selenium, unittest</p>
+                    </blockquote>
+                    <blockquote>
+                        <p>OOP</p>
+                        <p>patterns: singletone, page object</p>
+                    </blockquote>
+                    <blockquote>
+                        <p>Operations research</p>
+                        <p>Graph theory as conceptual testing tool</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+            <div class="container">
+                <h4><img class="responsive-img" src="{{ url_for('static', filename='images/title2.png')}}"></h4>
+                <p class="flow-text">&nbsp;&nbsp;&nbsp;As an applicant, I want to become a member of a group of professional
+                testers and improve my skills as an engineer for software testing automation.
+                To bring maximum benefit and mutual assistance to my team in creating a complex
+                software product. Work in the field of testing complex software products, test
+                automation, technical leadership of the testing group, planning and
+                implementation of various test solutions.
+                </p>
+
+                <h4>Work Experience</h4>
+                <table class="responsive-table">
+                    <thead>
+                      <tr>
+                          <th>job description</th>
+                          <th>position</th>
+                          <th>experience</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>Advanced training in the field of Pedagogy, Physics and Computer Science.</td>
+                        <td>Donbass State Pedagogical University, master's level student.</td>
+                        <td>
+                            teaching methods physics and astronomy general institutions secondary and higher education
+                            <!-- ORCID publication link -->
+                            <div itemscope itemtype="https://schema.org/Person">
+                                <a itemprop="sameAs" content="https://orcid.org/0000-0001-8426-6364" href="https://orcid.org/0000-0001-8426-6364" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;">
+                                    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">
+                                    https://orcid.org/0000-0001-8426-6364
+                                </a>
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Implementation testing, user support for system implementation in the middle school.</td>
+                        <td>State enterprise, contract, High School Laboratory Assistant.</td>
+                        <td>
+                            Electronic commercial software, “open school budget accounting system”
+                            system for keeping records, and publishing reports on budget
+                            expenditures in the secondary school education system.
+                            <a href="https://openschool.ua/">openschool.ua</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Operating, implementation testing, manual functional testing of desktop automated control system.</td>
+                        <td>State enterprise, contract, NDA.</td>
+                        <td>Group management up to 10 people; use of specialized software for corporate security purposes</td>
+                      </tr>
+                      <tr>
+                          <td>Work in a public educational institution as a teacher. History of science, digital history.</td>
+                          <td>Teacher, Middle School, Vocational Technical School.</td>
+                          <td>Public relations,
+                              mentoring, team working, experience in science and education,
+                              methodological work in educational institutions, Teaching in subjects
+                              Physics, Informatics.
+                          </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- paralax section white -->
+</div>
+<!-- paralax 2 -->
+<div class="parallax-container">
+      <div class="parallax"><img src="{{ url_for('static', filename='images/physicsColor.jpg') }}"></div>
+</div>
+<!-- Main content section 2 -->
+<div class="section white">
+
+    <div class="row">
+
+        <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
+          <!-- Grey navigation panel
+
+                This content will be:
+            3-columns-wide on large screens,
+            4-columns-wide on medium screens,
+            12-columns-wide on small screens  -->
+            <div class="container">
+                <h5>&nbsp;Quality Assurance</h5>
+                <hr>
+                <img class="responsive-img" src="{{ url_for('static', filename='images/mylogo.png')}}">
+                <hr>
+                <div class="personal">
+                    <h6 style="color: #64b5f6;">
+                        <a href="https://www.linkedin.com/in/nick-prytula-b724b1151/">
+                            <i class="fab fa-linkedin-in"></i>
+                                Nick
+                        </a>
+                    </h6>
+                    <h6>
+                        <i style="color: #64b5f6;" class="fab fa-skype"></i>
+                            Nickolazz1
+                    </h6>
+                    <h6 style="color: #64b5f6;">
+                        <a href="https://github.com/Nickolazz1">
+                            <i class="fab fa-github"></i>
+                                GitHub
+                        </a>
+                    </h6>
+                    <h6>
+                        <i style="color: #64b5f6;" class="material-icons">phone_android</i>
+                            +380990896690
+                    </h6>
+                    <h6>
+                        <a href="mailto:elanir358@gmail.com">
+                            <i style="color: #64b5f6;" class="material-icons">mail_outline</i>
+                                elanir358@gmail.com
+                        </a>
+                    </h6>
+                    <br>
+                    <div class="container">
+                        <img class="responsive-img" src="{{ url_for('static', filename='images/ORCID.png')}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+          <!-- Teal page content
+
+                This content will be:
+            9-columns-wide on large screens,
+            8-columns-wide on medium screens,
+            12-columns-wide on small screens  -->
+
+            <div class="container">
+                <h4><img class="responsive-img" src="{{ url_for('static', filename='images/title1.png')}}"></h4>
+                <h4>Software Testing for your bysiness solution</h4>
+                <p> Differend kinds of testing ready for you </p>
+                <ul>
+                    <li>
+                        <blockquote>
+                            <p class="flow-text">BDD test automation: <a href="https://github.com/Nickolazz1/OWASP_BWA_automation">example</a></p>
+                            <p> OWASP BWA - test-platform with most known top 10 vulnerabilities. #Python, #Gherkin, #selenium, #selenoid, #docker, #vmware</p>
+                        </blockquote>
+                    </li>
+                    <li>
+                        <blockquote>
+                            <p class="flow-text">Acceptance test driven development: <a href="https://github.com/Nickolazz1/JavaAutomation">java autotests example</a></p>
+                            <p>java test automation singletone pattern</p>
+                        </blockquote>
+                    </li>
+                    <li>
+                        <blockquote>
+                            <p class="flow-text">OWASP top 10 error detection</p>
+                            <a href="https://owasp.org/www-project-top-ten/">owasp.org project link</a>
+                        </blockquote>
+                    </li>
+                </ul>
+
+                <div class="slider">
+                    <ul class="slides">
+                      <li>
+                        <img src="{{ url_for('static', filename='images/programming.PNG') }}"> <!-- random image -->
+                        <div class="caption right-align">
+                          <h3 style="color: #ff1744;">Test automation</h3>
+                          <h4 style="color: #84ffff;">BDD, programming.</h4>
+                          <!--<h5 class="light cyan-text text-lighten-3">ATDD, BDD, unittest, programming, docker</h5>-->
+                        </div>
+                      </li>
+                      <li>
+                        <img src="{{ url_for('static', filename='images/semiautomate.png') }}"> <!-- random image -->
+                        <div class="caption left-align">
+                          <h3 style="color: #ff1744;">Semi-automation</h3>
+                          <h4 style="color: #00b8d4">Kali linux testing tools</h4>
+                        </div>
+                      </li>
+                      <li>
+                        <img src="{{ url_for('static', filename='images/UML_pageElemet.png') }}"> <!-- random image -->
+                        <div class="caption center-align">
+                          <h3 style="color: #ff1744;">Documentation</h3>
+                          <h4 style="color: #00b8d4">UML design</h4>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Teal page content
+
+                This content will be:
+            9-columns-wide on large screens,
+            8-columns-wide on medium screens,
+            12-columns-wide on small screens  -->
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h4>Why you need a tester?</h4>
+
+        <P>
+            &nbsp;&nbsp;&nbsp;Because they are necessary objective assessors. Acting as the voice of reason or as advocates for the inexperienced new user by checking and questioning ongoing development decisions in order to provide the optimal solution and to meet customer requirements and specifications to put out the best product.
+        </P>
+
+    </div>
+<!-- END Main content section 2 -->
+</div>
+{% endblock %}

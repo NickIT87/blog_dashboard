@@ -13,7 +13,7 @@ def home():
         uname = current_user.login
     except:
         uname = False
-    return render_template('index.html', curusr=uname)
+    return render_template('landingmpage.html', curusr=uname)
 
 
 @app.route('/blog', methods=['GET'])
@@ -72,7 +72,7 @@ def login_page():
             if next_page:
                 return redirect(next_page)
             else:
-                return render_template('index.html', curusr=user.login)
+                return render_template('landingmpage.html', curusr=user.login)
         else:
             flash('Login or password is not correct')
     else:
