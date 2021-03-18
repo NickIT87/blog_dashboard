@@ -30,7 +30,7 @@
                 <ul class="right hide-on-med-and-down">
                     <!--<li><a style="color: #e3f2fd;" href="#">Blog</a></li>-->
                     {% if messages %}
-                    <li><a class="waves-effect waves-light btn" href="{{ url_for('home') }}">home</a></li>
+                    <li><a class="waves-effect waves-light btn" href="{{ url_for('home') }}">Home</a></li>
                     {% else %}
                     <li><a class="waves-effect waves-light btn" href="{{ url_for('blog') }}">Blog</a></li>
                     {% endif %}
@@ -45,7 +45,11 @@
         </div>
     </nav>
     <ul class="sidenav" id="mobile-demo">
+        {% if messages %}
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        {% else %}
         <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        {% endif %}
         {% if curusr %}
         <li><a href="/admin">Admin</a></li>
         <li><a href="/register">register</a></li>
