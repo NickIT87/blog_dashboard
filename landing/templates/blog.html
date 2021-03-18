@@ -9,7 +9,7 @@
 
     <!-- All cards -->
     {% for message in messages %}
-    <div class="row">
+    <div class="row" id="{{ message.id }}">
         <div class="col s12 m12 l12">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
@@ -19,12 +19,16 @@
               <p>{{ message.text }}</p>
             </div>
             <div class="card-action">
-              <a href="{{ url_for('home') }}">to main page</a>
+                <a href="{{ url_for('home') }}">to main page</a>
+                <a href="{{ url_for('view_post', id=message.id-1) }}">{{message.id}}</a>
             </div>
           </div>
         </div>
     </div>
     {% endfor %}
+
+
+
 </div> <!-- MAIN CONTAINER -->
 
 {% endblock %}
