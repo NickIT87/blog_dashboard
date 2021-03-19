@@ -1,12 +1,30 @@
 {% extends "index.html" %}
 {% block post %}
 <div class="post_content">
-
     <h1>{{ id }}</h1>
 
     <p>{{ post }}</p>
 
-    <h1>I will display &#x16CF; &#x16DF;</h1>
+    <h1 id="mymsg">I will display &#x16CF; &#x16DF;</h1>
 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate,
+        et expedita minima ratione sequi. A aliquid atque, blanditiis earum molestias
+        natus numquam officia quo recusandae similique sint tenetur vel!</p>
 </div>
+<!-- custom style for footer -->
+<style type="text/css">
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+#mymsg {
+    color: red;
+}
+</style>
 {% endblock %}

@@ -13,7 +13,7 @@ def home():
         uname = current_user.login
     except:
         uname = False
-    return render_template('landingmpage.html', curusr=uname)
+    return render_template('landingmpage.html', curusr=uname, index=True)
 
 
 @app.route('/blog', methods=['GET'])

@@ -11,6 +11,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://kit.fontawesome.com/4ddb9605aa.js" crossorigin="anonymous"></script> <!-- Fontawesomelink icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- Custom CSS hardcode -->
 </head>
 <!-- Document body page -->
 <body>
@@ -57,10 +58,12 @@
         {% endif %}
     </ul>
 </header>
+<main>
 <!-- page inheritance -->
 {% block landing %}{% endblock %}
 {% block blog %}{% endblock %}
 {% block post %}{% endblock %}
+</main>
 <!-- Footer with advertising promotion -->
 <footer class="page-footer">
           <div class="container">
@@ -85,7 +88,13 @@
           </div>
  </footer>
 <!-- Additional custom hardcode -->
-<link rel="stylesheet" src="{{ url_for('static', filename='css/main.css') }}"> <!-- Sticky footer -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/material.js') }}"></script>
+{% if index %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/materialinit/indexmaterial.js') }}"></script>
+{% elif messages %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/materialinit/blogmaterial.js') }}"></script>
+{% elif post %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/materialinit/postmaterial.js') }}"></script>
+{% endif %}
 </body> <!-- End Body document -->
 </html>
