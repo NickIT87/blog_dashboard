@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greetings</title>
+    <title>Programming Coach</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- materialize icons -->
     <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://kit.fontawesome.com/4ddb9605aa.js" crossorigin="anonymous"></script> <!-- Fontawesomelink icons -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- Custom CSS hardcode -->
@@ -23,7 +24,7 @@
                 {% if curusr %}
                     <a href="/" class="brand-logo">root: {{ curusr }}</a>
                 {% else %}
-                    <a href="/" class="brand-logo"><img style="margin-top: 5%;"src="{{ url_for('static', filename='images/logoQA.png')}}"></a>
+                    <a href="{{ url_for('home') }}" class="brand-logo"><img style="margin-top: 5%;" src="{{ url_for('static', filename='images/logoQA.png')}}"></a>
                 {% endif %}
             </div>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -58,8 +59,8 @@
         {% endif %}
     </ul>
 </header>
-<main>
 <!-- page inheritance -->
+<main>
 {% block landing %}{% endblock %}
 {% block blog %}{% endblock %}
 {% block post %}{% endblock %}
