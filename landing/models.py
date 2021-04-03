@@ -9,9 +9,11 @@ from landing import db, manager
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.String(1024), nullable=False)
+    details = db.Column(db.String(1024), nullable=False)
 
-    def __init__(self, text, tags):
+    def __init__(self, text, tags, details):
         self.text = text.strip()
+        self.details = details.strip()
         self.tags = [
             Tag(text=tag.strip()) for tag in tags.split(',')
         ]

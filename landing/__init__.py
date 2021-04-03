@@ -28,4 +28,4 @@ admin.add_view(models.MyModelView(models.User, db.session))
 admin.add_view(models.MyModelView(models.Message, db.session))
 admin.add_view(models.MyModelView(models.Tag, db.session))
 
-#db.create_all()
+db.create_all()

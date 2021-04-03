@@ -30,7 +30,7 @@ def view_post(id):
     post = Message.query.all()
     if id >= len(post):
         return redirect(url_for('blog'))
-    return render_template('post.html', id=id, post=post[id].text)
+    return render_template('post.html', id=id, post=post[id].text, postdetail=post[id].details)
 
 
 @app.route('/feature', methods=['GET'])
@@ -50,7 +50,8 @@ def main():
 def add_message():
     text = request.form['text']
     tag = request.form['tag']
-    db.session.add(Message(text, tag))
+    details = request.form['details']
+    db.session.add(Message(text, tag, details))
     db.session.commit()
     return redirect(url_for('main'))
 
