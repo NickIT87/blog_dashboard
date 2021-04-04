@@ -14,9 +14,9 @@
           <div class="card blue darken-3">
             <div class="card-content white-text">
                 {% for tag in message.tags %}
-              <span class="card-title">{{ tag.text }}</span>
+              <span class="card-title yellow-text text-accent-2">{{ tag.text }}</span>
                 {% endfor %}
-              <p class="flow-text">{{ message.text }}</p>
+              <p class="flow-text cyan-text text-lighten-5">{{ message.text }}</p>
             </div>
             <div class="card-action">
                 <!--<a class="waves-effect waves-light btn-flat" href="{{ url_for('home') }}">to main page</a>-->
