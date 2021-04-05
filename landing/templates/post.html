@@ -1,17 +1,24 @@
 {% extends "index.html" %}
 {% block post %}
 <div class="post_content">
-    <h1>{{ id }}</h1>
+    <div class="container">
+        <div class="card-panel blue lighten-4">
+            {% for tag in tags %}
+                <h1 class="light-blue-text text-darken-4">{{ tag.text }} course:</h1>
+                <hr class="blue-text text-lighten-3">
+            {% endfor %}
+            <p class="flow-text blue-grey-text text-darken-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ post }}</p>
+            <p class="flow-text blue-grey-text text-darken-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ postdetail }}</p>
+        </div>
 
-    <p>{{ post }}</p>
-
-    <p>{{ postdetail }}</p>
-
-    <h1 id="mymsg">I will display &#x16CF; &#x16DF;</h1>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate,
-        et expedita minima ratione sequi. A aliquid atque, blanditiis earum molestias
-        natus numquam officia quo recusandae similique sint tenetur vel!</p>
+        <div class="card-panel purple lighten-5">
+            <h6 class="blue-grey-text text-darken-3">Contacts information:</h6>
+            <hr class="purple-text text-lighten-4">
+            <p class="flow-text blue-grey-text text-darken-3">Для заказа курса свяжитесь с преподавателем по телефону:</p>
+            <h3 class="pink-text text-lighten-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+38(099)089-66-90</h3>
+            <p class="blue-grey-text text-darken-3">Только для жителей Украины.</p>
+        </div>
+    </div>
 </div>
 <!-- custom style for footer -->
 <style type="text/css">
@@ -23,10 +30,6 @@ body {
 
 main {
     flex: 1 0 auto;
-}
-
-#mymsg {
-    color: red;
 }
 </style>
 {% endblock %}

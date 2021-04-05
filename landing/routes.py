@@ -30,7 +30,7 @@ def view_post(id):
     post = Message.query.all()
     if id >= len(post):
         return redirect(url_for('blog'))
-    return render_template('post.html', id=id, post=post[id].text, postdetail=post[id].details)
+    return render_template('post.html', tags=post[id].tags, post=post[id].text, postdetail=post[id].details)
 
 
 @app.route('/feature', methods=['GET'])
