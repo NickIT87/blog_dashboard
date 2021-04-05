@@ -4,7 +4,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 from landing import app, db
 from landing.models import Message, User
-from landing.mydash import dashapp
+#from landing.mydash import dashapp
 
 
 @app.route('/', methods=['GET'])
@@ -109,9 +109,9 @@ def logout():
     return redirect(url_for('home'))
 
 
-@app.route('/dash')
-def my_dash_app():
-    return dashapp.index()
+##@app.route('/dash')
+##def my_dash_app():
+##    return dashapp.index()
 
 
 @app.after_request
